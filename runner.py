@@ -37,7 +37,7 @@ def main():
             p = subprocess.Popen(task['command'], cwd=task.get('cwd'), env=env)
             processes.append(p)
             print('Started', task)
-            sleep(1)
+            sleep(.1)
             check_processes(processes)
         while True:
             check_processes(processes)
